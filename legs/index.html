@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Space Jazz Babes of Cloud City or a nearby equivalent</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css'>
+<link rel="stylesheet" href="audio-visualizer/dist/style.css">
+<style>
+  body{
+    overflow: auto;
+    display: inline-block;
+    background-color:black;
+    overscroll-behavior: auto;
+  }
+  .neon-container {
+  position: relative;
+  /* Apply neon glow to container */
+  
+    height:100vh;
+}
+  .pink {
+
+    filter: drop-shadow(0 0 5px  #ff0055) drop-shadow(0 0 15px #ff0055) drop-shadow(0 0 10px #ffffff);
+    
+  }
+  .cyan {
+
+    filter: drop-shadow(0 0 5px cyan) drop-shadow(0 0 15px cyan) drop-shadow(0 0 10px #ffffff);
+    
+  }
+    .yellow {
+
+    filter: drop-shadow(0 0 5px #CFFF04) drop-shadow(0 0 15px #CFFF04) drop-shadow(0 0 10px #ffffff);
+    
+  }
+
+      .violet{
+
+    filter: drop-shadow(0 0 5px violet) drop-shadow(0 0 15px violet) drop-shadow(0 0 10px #ffffff);
+    
+  }
+
+.image-1, .image-2 {
+  position: absolute;
+  filter: invert(100%) hue-rotate(280deg);
+  top: 200px;
+  left: -150px;
+  max-width:85%;
+  height:auto;
+  rotate:20deg;
+  
+  animation: alternateImages1 1s infinite;
+}
+
+.image-2 {
+  animation-delay: .5s; /* Delays second image to alternate */
+}
+.image-3, .image-4 {
+  position: absolute;
+  filter: invert(100%) hue-rotate(280deg);
+  top: 50px;
+  left: 60px;
+  max-width:65%;
+  height:auto;
+  rotate:10deg;
+  
+  animation: alternateImages3 1s infinite;
+}
+.image-3 {
+   /* Delays second image to alternate */
+}
+.image-4 {
+  animation-delay: .5s; /* Delays second image to alternate */
+}
+
+.image-5, .image-6, .image-7, .image-8{
+  position: absolute;
+  filter: invert(100%) hue-rotate(280deg);
+  top: 150px;
+  left: 230px;
+  max-width:60%;
+  height:auto;
+  rotate:0deg;
+  
+  animation: alternateImages5 1s infinite;
+}
+.image-5 {
+   animation-delay: .25s;/* Delays second image to alternate */
+}
+.image-6 {
+   animation-delay: .5s;/* Delays second image to alternate */
+}  
+  .image-7 {
+  animation-delay: .75s; /* Delays second image to alternate */
+}  
+ .image-8 {
+  animation-delay: 1s; /* Delays second image to alternate */
+}   
+ .image-9, .image-10{
+  position: absolute;
+  filter: invert(100%) hue-rotate(280deg);
+  top: 140px;
+  left: 400px;
+  max-width:60%;
+  height:auto;
+  
+  
+  animation: alternateImages9 1s infinite;
+}
+.image-9{
+   /* Delays second image to alternate */
+}
+.image-10 {
+  animation-delay: .5s; /* Delays second image to alternate */
+} 
+@keyframes alternateImages1 {
+  0%, 15% { opacity: 0; }
+  18%, 33% { opacity: 1; }
+  35%, 49% { opacity: 1; } 
+  51%, 65% { opacity: 1; }
+  67%, 81% { opacity: 0; }
+  83%, 100% { opacity: 0; }
+
+}
+@keyframes alternateImages3 {
+  0%, 16% { opacity: 0; }
+  18%, 33% { opacity: 0; }
+  35%, 49% { opacity: 1; } 
+  51%, 65% { opacity: 1; }
+  67%, 81% { opacity: 1; }
+  83%, 100% { opacity: 0; }
+}
+  @keyframes alternateImages5 {
+  0%, 20% { opacity: 0; }
+  25%, 50% { opacity: 0; }
+  51%, 74% { opacity: 1; } 
+  75%, 100% { opacity: 0; }
+}
+  @keyframes alternateImages9 {
+  0%, 16% { opacity: 1; }
+  18%, 33% { opacity: 0; }
+  35%, 48% { opacity: 0; } 
+  53%, 65% { opacity: 0; }
+  67%, 81% { opacity: 1; }
+  87%, 99% { opacity: 1; }
+}
+  .glow {
+  color: #fff; /* Text color, typically a bright color */
+  text-shadow:
+    0 0 20px #fff,  
+    0 0 15px #fff, 
+    0 0 10px pink, 
+    0 0 5px pink; 
+}
+@media  (max-width: 767px) {
+ .image-1, .image-2{
+   
+    rotate:280deg;
+   
+     width: 80vh; /* Use vh because the image is sideways */
+    height: auto;
+    max-width: none;
+    
+    /* Position adjustments */
+    top: 50%;
+    left: 50%;
+    translate: -60% 10%; /* This centers the rotated image perfectly */
+  }
+  .image-3, .image-4 {
+   
+    rotate:280deg;
+   
+     width: 60vh; /* Use vh because the image is sideways */
+    height: auto;
+    max-width: none;
+    
+    /* Position adjustments */
+    top: 50%;
+    left: 50%;
+    translate: -46% 4%; /* This centers the rotated image perfectly */
+  }
+  .image-5, .image-6, .image-7, .image-8 {
+   
+    rotate:280deg;
+   
+     width: 60vh; /* Use vh because the image is sideways */
+    height: auto;
+    max-width: none;
+    
+    /* Position adjustments */
+    top: 50%;
+    left: 50%;
+    translate: -30% 30%; /* This centers the rotated image perfectly */
+  }
+  .image-9, .image-10{
+   
+    rotate:280deg;
+   
+     width: 60vh; /* Use vh because the image is sideways */
+    height: auto;
+    max-width: none;
+    
+    /* Position adjustments */
+    top: 50%;
+    left: 50%;
+    translate: -20% 40%; /* This centers the rotated image perfectly */
+  }
+}
+</style>
+  </head>
+    
+  <body>
+  <div class="neon-container">
+    <div class="pink">
+  <img src="leg1_nobg.png" class="image-1" alt="First Image">
+  <img src="leg2_nobg.png" class="image-2" alt="Second Image">
+</div>
+      <div class="cyan">
+  <img src="legh1.png" class="image-3" alt="First Image">
+  <img src="legh2.png" class="image-4" alt="Second Image">
+</div>
+          <div class="yellow">
+  <img src="legt1.png" class="image-5" alt="First Image">
+  <img src="legt2.png" class="image-6" alt="Second Image">
+    <img src="legt3.png" class="image-7" alt="First Image">
+  <img src="legt4.png" class="image-8" alt="Second Image">        
+</div>
+    <div class="violet">
+  <img src="legg1.png" class="image-9" alt="First Image">
+  <img src="legg2.png" class="image-10" alt="Second Image">
+</div>
+</div>
+  </body>
+  <footer>
+    <div id="footer-placeholder" class="glow" style="font-weight:normal;"></div>
+        <script src="/pages/script-footer-neon.js"></script>
+            <script>
+                updateFooter('18px', '#FE019A', 'Neonderthaw',undefined,undefined);    
+            </script>
+  </footer>
+</html>
